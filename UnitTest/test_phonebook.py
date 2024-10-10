@@ -15,7 +15,6 @@ class PhonebookTest(unittest.TestCase):
         # phonebook = Phonebook()
         self.phonebook.add("Ankit", "123456")
         number = self.phonebook.lookup("Ankit")
-
         self.assertEqual(number, "123456")
 
     def test_name_not_present(self):
