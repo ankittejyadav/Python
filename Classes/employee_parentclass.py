@@ -1,4 +1,6 @@
 class Employee_parentclass:
+    __slots__ = ("name", "age", "position", "salary")
+
     def __init__(self, name, age, position, salary):
         self.name = name
         self.age = age
@@ -22,6 +24,8 @@ class Developer_childclass(Employee_parentclass):
 
 
 class Developer2_childclass(Employee_parentclass):
+    __slots__ = "framework"
+
     def __init__(self, name, age, position, salary, framework):  # Method Overriding
         super().__init__(name, age, position, salary)  # Method resolution order
         self.framework = framework
@@ -51,6 +55,6 @@ print(repr(employee3))
 print(issubclass(Employee_parentclass, object))
 print("---------------------------------------------")
 
-employee4 = Developer2_childclass("Jay", 22, "L2", 500)
+employee4 = Developer2_childclass("Jay", 22, "L2", 500, "Spring")
 employee4.increase_salary(50, 20)
 print(f"Employee 4 salary - {employee4.salary}")
