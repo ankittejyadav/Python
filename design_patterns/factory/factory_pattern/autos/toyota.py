@@ -1,7 +1,7 @@
-from .abs_auto import Abs_Auto
+from .abs_auto import AbsAuto
 
 
-class Toyota(Abs_Auto):
+class Toyota(AbsAuto):
     def start(self):
         print("Toyota starts")
 

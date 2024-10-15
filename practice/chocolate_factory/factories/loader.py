@@ -7,7 +7,7 @@ def load_factory(factory_name):
     try:
         factory_module = import_module("." + factory_name, "factories")
     except ImportError:
-        factory_module = import_module(".other_factory", "factories")
+        factory_module = import_module(".others_factory", "factories")
 
     classes = getmembers(factory_module, lambda m: isclass(m) and not isabstract(m))
 

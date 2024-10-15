@@ -1,6 +1,11 @@
 from inspect import getmembers, isclass, isabstract
 import autos
 
+"""Dynamic Loading: The factory automatically loads all the concrete car classes from the autos module 
+when it is instantiated.
+Instance Creation: The create_instance() method can be used to create objects of any car model that is 
+defined in the autos module and that inherits from AbsAuto."""
+
 
 class AutoFactory(object):
     autos = {}

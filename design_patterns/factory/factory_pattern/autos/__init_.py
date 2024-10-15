@@ -1,4 +1,4 @@
-from .abs_auto import Abs_Auto
+from .abs_auto import AbsAuto
 from .toyota import Toyota
 from .mercedes import Mercedes
 from .bmw import BMW

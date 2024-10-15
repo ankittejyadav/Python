@@ -2,9 +2,10 @@ from toyota import Toyota
 from mercedes import Mercedes
 from bmw import BMW
 from nullcar import NullCar
+from typing import Union
 
 """Problems - To add a new car, open this code,modify the imports and method -
-This Breaks Open/ClosePrinciple
+This Breaks Open/Close Principle
 
 Directly Instatiating car classes - Breaks Dependency Injection Principle
 
@@ -12,7 +13,7 @@ Recognize - Lots of If Else blocks
 """
 
 
-def get_car(carname):
+def get_car(carname: str) -> Union[Toyota, Mercedes, BMW, NullCar]:
     if carname == "Toyota":
         return Toyota()
     elif carname == "Mercedes":

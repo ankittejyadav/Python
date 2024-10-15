@@ -1,8 +1,7 @@
-from .abs_auto import Abs_Auto
+from .abs_auto import AbsAuto
 
 
-class NullCar(Abs_Auto):
-
+class NullCar(AbsAuto):
     def start(self):
         print('Unknow car "%s"' % (self.name))
 

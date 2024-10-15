@@ -1,7 +1,7 @@
 import abc
 
 
-class AbsAuto(abc.ABC):
+class AbsChocolate(abc.ABC):
     @property
     def name(self):
         return self._name
@@ -11,9 +11,9 @@ class AbsAuto(abc.ABC):
         self._name = name
 
     @abc.abstractmethod
-    def start(self):
+    def eat(self):
         pass
 
     @abc.abstractmethod
-    def stop(self):
+    def review(self):
         pass
